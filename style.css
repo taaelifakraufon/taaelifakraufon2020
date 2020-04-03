@@ -1,0 +1,517 @@
+html {
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: black;
+} 
+
+.box{
+    width: 600px;
+    height: 945px;
+    background: rgba(117, 117, 117, 0.4);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+}
+
+.box-img{
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+}
+.box-h1{
+    font-size: 60px;
+    letter-spacing: 6px;
+    font-weight: inherit;
+}
+.box-h2{
+    font-size: 30px;
+    letter-spacing: 9px;
+    font-weight: bold;
+}
+.box-p{
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-weight: inherit;
+}
+.container34 {
+    position: relative;
+    width: 1200px;
+    height: 900px;
+    margin: 10px auto;
+}
+.container34 .box
+{
+    position: relative;
+    width: 500px;
+    height: 400px;
+    background: rgb(98, 124, 139);
+    float: right;
+    margin: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.container34 .box .icon
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(93, 143, 158);
+    transition: 0.5s;
+    z-index: 1;
+}
+.container34 .box:hover .icon 
+{ 
+    top: 20px; 
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.container34 .box .icon .fa 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(244, 247, 240);
+}
+.container34 .box .content
+{
+    position: absolute;
+    top: 150px;
+    height: calc(100%-170px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.line{
+    height: 25px;
+    min-width: 800px;
+    margin: 0 auto 10px;
+    line-height: 25px;
+    font-size: 14px;
+    color: white;
+    padding: 0 0 0 10px;
+    position: relative;
+}
+.line:before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 25px;
+    top: 0;
+    z-index: -2;
+    background: #598894;
+}
+
+header{
+    height: 0px;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px 0;
+    background-color: black;
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.116);
+    font-family: cursive;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f32828;
+}
+
+.navbar ul li a:hover {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    color: whitesmoke;
+}
+section#home{
+    background: url('https://www.opticgroove.com.au/wp-content/uploads/mine-photography-drill-rig-boggabri-nsw-lg.jpg') no-repeat center center/ cover;
+}
+main{
+    height: 400px;
+    text-align: center;
+    margin-top:80px;
+    padding-left: 240px;
+    padding-right: 240px;
+}
+h1 {
+    font-size: 84px;
+    color: rgb(255, 255, 255);
+    font-family:  cursive;
+    text-align: center; 
+}
+p {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    font-family:  cursive; 
+    margin-top: auto;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+h1 {
+    margin-top: 3px;
+}
+.container{
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-left: 500px;
+    position: absolute;
+    width: 70%;
+    height: 0;
+    padding-bottom: 40%;
+    border: solid 5px #2c2c2c;
+}
+.slide_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.slide_img img{
+    width: 100%;
+    height: 100%;
+}
+#i1, #i2, #i3, #i4{
+    display: none;
+}
+.pre, .nxt{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(88,88,88,.4);
+    z-index: 99;
+    cursor: pointer;
+}
+.pre{
+    left: 0;
+}
+.nxt{
+    right:0;
+}
+.nav{
+    width: 100%;
+    height: 11px;
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+}
+.dots{
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+}
+.slide_img{
+    z-index: -1;
+
+}
+#i1:checked ~  #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four {
+    z-index: 9;
+}
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3,
+#i4:checked ~ .nav #dot4 {
+    background: #fff;
+
+}
+a {
+    color: rgb(253, 253, 253);
+    font-family: cursive;
+    /* text-decoration: none; */
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+} 
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: top;
+    text-align: left;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: left;
+}
+
+section h1 {
+    font-size:3rem;
+    font-family: cursive;
+    height: 10vh;
+    text-align: center;
+    justify-content: top; 
+}
+
+section p {
+    font-size: 3rem;
+    font-family: cursive;
+    height: 180vh;
+    text-align: center;
+    justify-content: top;
+}
+
+.slider-container {
+    width: 200;
+}
+
+section h2 { 
+    font-size:3rem;
+    font-family: cursive;
+    height: 180vh;
+    text-align: center;
+    justify-content: top;
+}
+
+section p {
+    font-size: 3rem;
+    height:190vh;}
+
+section h3 {
+    font-size:3rem;
+    font-family: cursive;
+    height: 180vh;
+    text-align: center;
+    justify-content: top;
+ 
+}
+
+section p {
+    font-size: 1.5rem;
+    font-family: cursive; 
+    height: 300vh;
+    text-align: middle;
+    justify-content: top;
+}   
+
+section h4 {
+    font-size:3rem;
+    font-family: cursive;
+    height: 160vh;
+    text-align: center;
+    justify-content: top;
+ 
+}
+section h5 {
+    font-size:3rem;
+    font-family: cursive;
+    height: 160vh;
+    text-align: center;
+    justify-content: top;
+}
+.slidershow{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.middle{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+}
+.center{
+    width: 50%;
+    position: center;
+    height: 20%;
+    top: 2%;
+    left: 50%;
+    right: 50%;
+    transform: translate(0%,0%);
+    padding: 5px;
+    background: #333;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+h6
+{
+    margin: 10;
+    padding: 10;
+    color: rgb(255, 255, 255);
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    font-size: 20rem;
+    position: 0;
+}
+
+.style {
+    box-sizing: border-box;
+}
+      
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 0px;
+}
+      
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.a {
+    text-align: center;
+  }
+  
+div.b {
+    text-align: left;
+  }
+  
+div.c {
+    text-align: right;
+  } 
+  
+div.d {
+    text-align: justify;
+  } 
+
+  div.aa {
+    background-color: rgba(88, 136, 190, 0.315);
+    width: 820px;
+    height: 100px;
+    border: 2.5px solid rgba(157, 195, 238, 0.315);
+    padding: 10px;
+    margin: 22px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  div.bb {
+    background-color: #598894;
+    width: 500px;
+    height: 150px;
+    border: 2.5px solid #598894;
+    padding: 10px;
+    margin: 22px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .contact-title{
+      margin-top: 200px;
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      transition: all 4s ease-in-out;
+  }
+  .contact-title h1{
+      font-size: 32px;
+  }
+  .contact-title h2{
+      font-size: 16px;
+  }
+  form{
+      margin-top: 50px;
+      transition: all 4s ease-in-out;
+      text-align: center;
+  }
+  .form-control{
+      width: 600px;
+      background: rgb(255, 255, 255);
+      border: none;
+      outline: none;
+      border-bottom: 1.5px solid rgb(255, 252, 252);
+      color: rgb(255, 254, 254);
+      font-size: 20px;
+      margin-bottom: 16px;
+  }
+  input{
+      height: 45px;
+      width: 80px;
+  }
+  form .submit{
+      background: #ff5722;
+      border-color: transparent;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 80px;
+      margin-top: 20px;
+  }
+  form .submit:hover{
+      background-color: #eb1a1a;
+      cursor: pointer;
+  }
+  section#skillsets{
+    background: url('https://www.x-one.asia/wp-content/uploads/2019/07/15411555025bdc2aae54d493.92923804.jpg') no-repeat center center/ cover;
+}
+  section#contact{
+    background: url('https://www.x-one.asia/wp-content/uploads/2019/07/15411555025bdc2aae54d493.92923804.jpg') no-repeat center center/ cover;
+}
+  .footer{
+    height: 10%;
+    bottom: 0;
+    }
+  .text p {
+    font-size: 14px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 0px;
+}
